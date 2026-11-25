@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un noviembre contigo 🍂</title>
+<style>
+:root{--wine:#71394a;--rose:#a65e70;--cream:#fff8ee;--paper:#fffaf3;--gold:#c69b61;--ink:#674956}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 15% 8%,#fffdf8 0,transparent 35%),radial-gradient(ellipse at 90% 30%,#ead5c2 0,transparent 38%),linear-gradient(145deg,#f5e8d9,#ead4c2 55%,#f8eee3);overflow-x:hidden}
+.scene{min-height:100vh;display:grid;place-items:center;padding:42px 16px;position:relative;z-index:1}
+.panel{width:min(760px,100%);padding:clamp(25px,5vw,52px);border:1px solid #c49a7655;border-radius:22px;background:#fffaf0ed;box-shadow:0 22px 65px #613b3a20;text-align:center}
+.kicker{font:700 .75rem/1.5 system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#a8795d}
+h1{font-size:clamp(2.8rem,9vw,5.4rem);line-height:1.02;font-weight:500;color:var(--wine);margin:12px 0}
+.subtitle{font-size:1.12rem;line-height:1.8;color:#87616a}.ornament{margin:24px;color:var(--gold);font-size:1.5rem}
+button{font:600 1rem system-ui,sans-serif;border:0;border-radius:30px;padding:14px 24px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 9px 24px #71394a30}
+.primary{background:linear-gradient(135deg,#9c5868,#71394a);color:#fff8ee}
+.hint{font: .82rem system-ui,sans-serif;color:#ad8b7b;margin-top:18px}
+#letterWrap,#surprise{display:none;width:min(760px,100%)}
+#letterWrap.show,#surprise.show{display:block;animation:fade .7s ease both}
+.letter{padding:clamp(24px,5vw,48px);background:var(--paper);border:1px solid #c69b6155;border-radius:8px;box-shadow:0 20px 55px #553b321f;text-align:left;line-height:1.9;font-size:1.07rem;position:relative}
+.letter:before{content:"";position:absolute;inset:9px;border:1px solid #c69b6138;pointer-events:none}
+.letter h2{text-align:center;font-size:clamp(1.7rem,5vw,2.25rem);font-weight:500;color:var(--wine);margin:0 0 26px}
+.letter p{margin:0 0 1.1em}.letter .sign{text-align:right;color:var(--wine);font-style:italic;margin:1.5em 0 0}
+.actions{text-align:center;margin-top:28px}
+#surprise{text-align:center;padding:35px 15px}
+.heart{font-family:system-ui,sans-serif;font-size:clamp(5rem,18vw,8rem);line-height:1.2;display:inline-block;filter:drop-shadow(0 8px 14px #a65e7040);animation:heartbeat 1.25s ease-in-out infinite}
+.surprise-note{font-size:clamp(1.1rem,4vw,1.45rem);line-height:1.7;color:var(--wine);max-width:520px;margin:20px auto 0}
+.leaf{position:fixed;top:-45px;z-index:0;pointer-events:none;color:#a66b43;animation:fall linear infinite;opacity:.78}
+@keyframes fall{0%{transform:translate3d(0,-5vh,0) rotate(0deg);opacity:0}10%,88%{opacity:.8}100%{transform:translate3d(var(--drift),110vh,0) rotate(560deg);opacity:0}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}14%{transform:scale(1.13)}28%{transform:scale(1)}42%{transform:scale(1.09)}56%{transform:scale(1)}}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+footer{text-align:center;padding:0 12px 22px;color:#9b7a70;font: .78rem system-ui,sans-serif;position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="scene">
+<section class="panel" id="cover">
+ <p class="kicker">Una pequeña celebración para nosotros</p>
+ <h1>Un noviembre<br>contigo 🍂</h1>
+ <div class="ornament">✦　♡　✦</div>
+ <p class="subtitle">Cuatro meses de elegirnos, aprender y seguir construyendo algo bonito.</p>
+ <button class="primary" id="openLetter">Abrir mi cartita 💌</button>
+ <p class="hint">Hecho con mucho amor para ti, pichoncita.</p>
+</section>
+<section id="letterWrap">
+ <article class="letter">
+  <h2>Felices 4 meses, pichoncita ❤️</h2>
+  <p>Oñaaaaaa pichoncita hermoshaaaa, ya son 4 meses no manches que rápido se va el tiempo cuando estás con la personita que te mueve el mundo.</p>
+  <p>Primero que nada muchas gracias por mi regalo de cumpleaños me gustó demasiado y me hizo sacar lágrimas, también me gustó mucho la playlist que me hiciste, la escuché todo el día de cumpleaños te adoro mucho preciosota, de verdad muchas gracias por ese detalle tan lindo.</p>
+  <p>Me da gusto saber que estamos yendo bien en la relación, que estés más abierta a hablar y menos a no hablar por estar molesta, también me da gusto verte más expresiva con tus emociones.</p>
+  <p>Te amo mucho mi amor, espero sigamos yendo por esta línea y tengamos una relación bonita y sana para estar mucho tiempo juntitos belleza ❤️</p>
+ </article>
+ <div class="actions"><button class="primary" id="lastThing">Tengo una última cosita para ti 🍁</button></div>
+</section>
+<section id="surprise" aria-live="polite">
+ <div class="heart" aria-label="Corazón latiendo">❤️</div>
+ <p class="surprise-note">Y si pudiera volver a elegir, volvería a elegirte a ti.</p>
+</section>
+</main>
+<footer>Con cariño, para nuestros cuatro meses. 🍂</footer>
+<script>
+const leaves=['🍂','🍁','🍃','✧'];
+for(let i=0;i<25;i++){
+ const el=document.createElement('span');el.className='leaf';el.textContent=leaves[Math.floor(Math.random()*leaves.length)];
+ el.style.left=Math.random()*100+'vw';el.style.fontSize=(15+Math.random()*17)+'px';el.style.animationDuration=(10+Math.random()*13)+'s';el.style.animationDelay=(-Math.random()*22)+'s';el.style.setProperty('--drift',(Math.random()*190-95)+'px');document.body.appendChild(el);
+}
+const cover=document.getElementById('cover'),letter=document.getElementById('letterWrap'),surprise=document.getElementById('surprise');
+document.getElementById('openLetter').addEventListener('click',()=>{cover.style.display='none';letter.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});});
+document.getElementById('lastThing').addEventListener('click',()=>{letter.style.display='none';surprise.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
